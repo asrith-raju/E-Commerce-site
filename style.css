@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* border: 2px solid red; */
+}
+:root {
+    --white-clr: #fff;
+    --black-clr: #000;
+    --light-black: #333;
+    --primary-clr: #e6303d;
+    --secondary-clr: #eee;
+    --tag-clr: #7cc576;
+}
+header {
+    background-color: var(--white-clr);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0px 5px 14px .75px rgba(36, 11, 12, 0.05);
+}
+li {
+    list-style: none;
+}
+a:hover {
+    color: var(--primary-clr);
+}
+a {
+    text-decoration: none;
+}
+/* img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform .3s ease-in-out;
+} */
+.flex{
+    display: flex;
+    align-items: center;
+}
+.navbar{
+    
+}
+.container {
+    max-width: 80%;
+    margin: auto;
+    
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--light-black);
+}
+.link {
+    font-size: .95rem;
+    color: var(--light-black);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.icon {
+    font-size: .9rem;
+    color: var(--light-black);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+.icon:hover,
+.icon-active {
+    background: var(--secondary-clr);
+}
+span,
+.link-active,
+.icon-active,.price {
+    color: var(--primary-clr);
+}
+.navbar {
+    height: 12vh;
+    justify-content: space-between;
+}
+.navlist {
+    gap: 2.5rem;
+}
+.nav-icons {
+    gap: 1rem;
+}
+.hide {
+    display: none;
+}
+.hamburger {
+    font-size: 1.7rem;
+    color: var(--primary-clr);
+}
+.hero {
+    height: 115vh;
+    background-image: url(Assets/hero-image.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.content h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+.content ,.womens,.offers h3 {
+    font-weight: 400;
+}
+.content {
+    position: absolute;
+    right: 15%;
+}
+.btn {
+    height: 40px;
+    width: 100px;
+    border: none;
+    font-weight: 500;
+    margin-top: 15px;
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+.btn:hover {
+    background-color: var(--light-black);
+}
+.for {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
+    align-items: center;
+}
+.for-men,
+.for-women {
+    background-image: url(Assets/for\ men.jpg);
+    height: 75vh;
+    width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    justify-content: center;
+    transition: transform .3s ease-in-out;
+}
+.for-btn {
+    height: 40px;
+    width: 130px;
+    border: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.for-btn:hover {
+    background-color: var(--primary-clr);
+}
+.for-men:hover,
+.for-acce:hover,
+.for-women:hover,
+.for-kids:hover,
+.card1:hover{
+    transform: scale(1.05);
+}
+.for1 {
+    flex-direction: column;
+    gap: 5vh;
+}
+.for-kids,
+.for-acce {
+    background-image: url(Assets/for\ kids.jpg);
+    height: 35vh;
+    width: 350px;
+    justify-content: center;
+    transition: transform .3s ease-in-out;
+}
+.for-acce {
+    background-image: url(Assets/for\ accessories.jpg);
+}
+.for-women {
+    background-image: url(Assets/for\ women.jpg);
+    justify-content: center;
+}
+.midhead{
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+.line{
+    height: 5px;
+    width: 50px;
+    background-color: var(--primary-clr);
+}
+.new,.bestsale{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    overflow-x: auto;
+    flex-direction: row;
+    overflow: hidden;
+}
+.card1{
+    height: auto;
+    width: 260px;
+    flex-direction: column;
+    transition: transform 2s ease-in-out;
+}
+.card-image{
+    height: 270px;
+    width: 250px;
+}
+.card-content,.endbtn{
+    text-align: center;
+    width: 100%;
+}
+.newbtn1{
+    background-color: var(--tag-clr);
+    color: var(--white-clr);
+}
+.womens{
+    width: 100%;
+    min-height: 50vh;
+    background-image: url(Assets/sale-image.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top:20px ;
+    justify-content: center;
+    flex-direction: column;
+}
+.womens h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+.line1{
+    height: 1px;
+    width: 230px;
+    background-color: grey;
+}
+.bestsale{
+    flex-wrap: wrap;
+}
+.offers{
+    height: auto;
+    background-color: var(--secondary-clr);
+    margin-top: 20px;
+    justify-content: center;
+    gap: 3rem;
+}
+.offers div{
+    text-align: center;
+    margin: 10px;
+}
+.newlatest{
+}
+.newlatest {
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.newlatest {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.outerdiv {
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.latest-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.outerdiv:hover .latest-content {
+  opacity: 1;
+}
+.hamburger{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 20px;
+}
+.email{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background-color: var(--secondary-clr);
+}
+#mail{
+    height: 40px;
+    width: 400px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.subscribe{
+    height: 40px;
+    width: 100px;
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+    border: none;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+.footer-links{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+}
+.footer-links div{
+    margin: 30px;
+}
+.dev{
+    text-align: center;
+    margin: 10px;
+}
+@media(max-width:400px){
+    
+    .logo{
+        text-align: center;
+    }
+    .link{
+        display: none;
+        flex-direction: column;
+    }
+    .hamburger{
+        display: block;
+        top: 25%;
+    }
+    .container{
+        max-width: 50%;
+    }
+    .icon{
+    width: 30px;
+    }
+    .icon-active{
+        border-radius: 50%;
+    }
+    main{
+        justify-content: center;
+    }
+    .hero{
+        height: 50vh;
+        margin-top: 20%;
+        width: 100%
+    }
+    .content{
+        position: absolute;
+        right: 20px;
+        text-align:right;
+        font-size: 10px;
+    }
+    .content h1{
+        font-size: 15px;
+    }
+    .nav-icons{
+        position: absolute;
+        right: 10px;
+        gap: 3px;
+    }
+    .for-kids,.for-acce{
+        background-repeat: no-repeat;
+    }
+    .for{
+        flex-direction: column;
+        padding: 10px;
+        justify-content: center;
+    }
+    .new{
+        flex-direction: column;
+    }
+    .womens{
+       width: 100%;
+       gap: 5px;
+    }
+    .womens h1{
+        text-align: center;
+    }
+    .offers{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .email{
+        flex-direction: column;
+        text-align: center;
+    }
+    #mail{
+        max-width: 200px;
+        border-radius: 5px;
+    }
+    .footer-links{
+        grid-template-columns: repeat(1,1fr);
+        gap: 0px;
+        margin: 10px;
+    }
+    
+
+}

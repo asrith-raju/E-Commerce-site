@@ -77,3 +77,19 @@ function toggleMenu() {
     const nav = document.querySelector('.navlist');
     nav.classList.toggle('hide');
 }
+const list = document. querySelector(".navlist")
+const hamburg= document. querySelector(".fa-bars")
+hamburg.addEventListener("click",()=>{
+      hamburg.classList.toggle("fa-x")
+      list.classList.toggle("navlist-active")
+})
+let search = document.querySelector('.fa-magnifying-glass')
+let links= document.querySelector(".link")
+let ic1= document.querySelector(".icon1")
+let search1= document.getElementById("search")
+search.addEventListener("click",()=>{
+    links.classList.toggle("hide")
+    search.classList.toggle("hide")
+     search1.classList.toggle("hide")
+     ic1.classList.toggle("hide") 
+})

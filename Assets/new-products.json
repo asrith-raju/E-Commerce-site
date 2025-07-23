@@ -1,0 +1,26 @@
+[
+    {
+        "image": "/Assets/images/card-image1.jpg",
+        "name": "Men Shoes",
+        "brand": "Aadi",
+        "price": "₹500"
+    },
+    {
+        "image": "/Assets/images/card-image2.jpg",
+        "name": "Leather Hand Bag",
+        "brand": "Lorem",
+        "price": "₹1600"
+    },
+    {
+        "image": "/Assets/images/card-image3.jpg",
+        "name": "Unisex Winter Jacket",
+        "brand": "AR",
+        "price": "₹999"
+    },
+    {
+        "image": "/Assets/images/card-image4.jpg",
+        "name": "Mens Black Jacket",
+        "brand": "Panther",
+        "price": "₹1299"
+    }
+]

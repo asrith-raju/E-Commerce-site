@@ -1,0 +1,59 @@
+[
+  
+  {
+    "image": "/Assets/images/card-image5.jpg",
+    "name": "Cargo Bag",
+    "brand": "Nike",
+    "price": "₹1500",
+    "state":"sale"
+  },
+  {
+    "image": "/Assets/images/card-image6.jpg",
+    "name": "Umbrella",
+    "brand": "Laxi",
+    "price": "₹999",
+    "state":"sale"
+  },
+  {
+    "image": "/Assets/images/card-image7.jpg",
+    "name": "Minimal Bracelet",
+    "brand": "Ak",
+    "price": "₹500",
+    "state":"sale"
+  },
+  {
+    "image": "/Assets/images/card-image8.jpg",
+    "name": " suspenders",
+    "brand": "",
+    "price": "₹500",
+    "state":"sale"
+  },
+  {
+    "image": "/Assets/images/card-image9.jpg",
+    "name": "High waist Shoes Women",
+    "brand": "LV",
+    "price": "₹2000",
+    "state":"sale"
+  },
+  {
+    "image": "/Assets/images/card-image10.jpg",
+    "name": "Hand Bag Women ",
+    "brand": "Mirai",
+    "price": "₹1500",
+    "state":"sale"
+  },
+  {
+    "image": "/Assets/images/card-image11.jpg",
+    "name": "Travelling Bad",
+    "brand": "Wrogn",
+    "price": "₹1500",
+    "state":"sale"
+  },
+  {
+    "image": "/Assets/images/card-image12.jpg",
+    "name": "Full Sleeve olive green shirt",
+    "brand": "Roadster",
+    "price": "₹800",
+    "state":"new"
+  }
+]

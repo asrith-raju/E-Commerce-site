@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const container = document.querySelector(".cart-items"); // 🔧 Match your HTML class
+  const container = document.querySelector(".cart-items"); 
 
   if (cart.length === 0) {
     container.innerHTML = "<p>Your cart is empty.</p>";
@@ -17,10 +17,10 @@ window.addEventListener("DOMContentLoaded", () => {
         <p><strong>${name}</strong></p>
         <p>Brand: ${brand}</p>
         <p>Price: ${price}</p>
-        <button class="removebtn">Remove</button>
+        <a href="#" class="delete"><i class="fa-solid fa-trash "></i></a>
       </div>
     `;
-    const removeBtn = div.querySelector(".removebtn")
+    const removeBtn = div.querySelector(".delete")
     removeBtn.addEventListener("click",()=>{
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let newcart=cart.filter(item => item.name!==name);

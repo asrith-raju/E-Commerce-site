@@ -32,6 +32,10 @@ function createcard(classname, upperbtn, image,name, brand, price, index) {
     endBtn.addEventListener("click", () => {
     const product = { image, name, brand, price };
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const alreadyexists = cart.some(item => item.name == product.name && item.brand == product.brand);
+    if(alreadyexists){
+        return ;
+    }
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
 });

@@ -17,8 +17,18 @@ window.addEventListener("DOMContentLoaded", () => {
         <p><strong>${name}</strong></p>
         <p>Brand: ${brand}</p>
         <p>Price: ${price}</p>
+        <button class="removebtn">Remove</button>
       </div>
     `;
+    const removeBtn = div.querySelector(".removebtn")
+    removeBtn.addEventListener("click",()=>{
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let newcart=cart.filter(item => item.name!==name);
+      
+      localStorage.setItem("cart", JSON.stringify(newcart));
+      
+      location.reload();
+    })
     container.appendChild(div);
   });
 });

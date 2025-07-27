@@ -190,7 +190,26 @@ button {
     width: 35px;
     padding-left: 10px;
 }
-
+.footer{
+    background-color: var(--secondary-clr);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+}
+.cartp{
+    border: none;
+    background-color: var(--secondary-clr);
+}
+.top{
+    gap: 20px;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 @media (max-width:500px) {
     body {
         padding: 5px;
@@ -238,6 +257,7 @@ button {
 
     .priceadd {
         width: 50px;
+        border: none;
     }
     .top{
         font-size: 12px;

@@ -10,7 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   cart.forEach(({ image, name, brand, price }) => {
     const numericPrice = parseInt(price.toString().replace(/[^0-9]/g, ""));
-
     const div = document.createElement("div");
     div.className = "cart-item";
     div.innerHTML = `
@@ -31,6 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
         <a href="#" class="delete"><i class="fa-solid fa-trash "></i></a>
       </div>
+      
     `;
     let increment = div.querySelector('.increment');
     let plus = div.querySelector('.plus')
@@ -41,15 +41,29 @@ window.addEventListener("DOMContentLoaded", () => {
       const quantity = parseInt(increment.value)
       const total = parseInt(numericPrice) * quantity
       priceadd.value = total;
+      totalcart()
     });
-     minus.addEventListener("click", () => {
+    minus.addEventListener("click", () => {
       if (parseInt(increment.value) > 1) {
         increment.value = parseInt(increment.value) - 1;
         const quantity = parseInt(increment.value)
         const total = parseInt(numericPrice) * quantity
         priceadd.value = total;
+        totalcart()
       }
     });
+    function totalcart() {
+      const allItems = document.querySelectorAll('.cart-item');
+      let total = 0;
+
+      allItems.forEach(item => {
+        const priceField = item.querySelector('.priceadd');
+        total += parseInt(priceField.value);
+      });
+
+      document.getElementById('total-amount').textContent = total;
+    }
+    
     const removeBtn = div.querySelector(".delete")
     removeBtn.addEventListener("click", () => {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -60,8 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
       location.reload();
     })
     container.appendChild(div);
-    
-   
+    totalcart();
+
   });
 });
-

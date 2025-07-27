@@ -172,8 +172,7 @@ span,
 .for-men:hover,
 .for-acce:hover,
 .for-women:hover,
-.for-kids:hover,
-.card1:hover{
+.for-kids:hover{
     transform: scale(1.05);
 }
 .for1 {
@@ -220,7 +219,7 @@ span,
     height: auto;
     width: 260px;
     flex-direction: column;
-    transition: transform 1s ease-in-out;
+    /* transition: transform 1s ease-in-out; */
 }
 .card-image{
     height: 270px;
@@ -332,6 +331,7 @@ span,
     border: none;
     outline: none;
     padding: 10px;
+    margin: 10px;
 }
 .subscribe{
     height: 40px;

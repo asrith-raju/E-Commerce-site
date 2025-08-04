@@ -115,3 +115,4 @@ search.addEventListener("click", () => {
     latest("Runway Looks", "news-image2.jpg");
     latest("Style Picks", "news-image3.jpg");
 })
+

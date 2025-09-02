@@ -150,6 +150,8 @@ span,
 .for-men,
 .for-women {
     background-image: url(/Assets/images/for\ men.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 75vh;
     width: 300px;
     background-size: cover;
@@ -182,6 +184,8 @@ span,
 .for-kids,
 .for-acce {
     background-image: url(/Assets/images/for\ kids.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 35vh;
     width: 350px;
     justify-content: center;
@@ -189,10 +193,14 @@ span,
 }
 .for-acce {
     background-image: url(/Assets/images/for\ accessories.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .for-women {
     background-image: url(/Assets/images/for\ women.jpg);
     justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .midhead{
     flex-direction: column;

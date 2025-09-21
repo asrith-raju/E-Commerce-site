@@ -6,7 +6,7 @@ let getData = async () => {
     newproductsdata = await newproductsdata.json()
 
 }
-function createcard(classname, upperbtn, image,name, brand, price, index) {
+function createcard(classname, upperbtn, image, name, brand, price, index) {
     let sec = document.querySelector(classname)
     const card = document.createElement("div")
     card.className = "card1 flex"
@@ -30,15 +30,15 @@ function createcard(classname, upperbtn, image,name, brand, price, index) {
         endBtn.classList.add("hide")
     })
     endBtn.addEventListener("click", () => {
-    const product = { image, name, brand, price };
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const alreadyexists = cart.some(item => item.name == product.name && item.brand == product.brand);
-    if(alreadyexists){
-        return ;
-    }
-    cart.push(product);
-    localStorage.setItem("cart", JSON.stringify(cart));
-});
+        const product = { image, name, brand, price };
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const alreadyexists = cart.some(item => item.name == product.name && item.brand == product.brand);
+        if (alreadyexists) {
+            return;
+        }
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+    });
 }
 
 function offers(iconname, offname, ptag) {
@@ -75,36 +75,39 @@ function toggleMenu() {
     const nav = document.querySelector('.navlist');
     nav.classList.toggle('hide');
 }
-const list = document.querySelector(".navlist")
-const hamburg = document.querySelector(".fa-bars")
-hamburg.addEventListener("click", () => {
-    hamburg.classList.toggle("fa-x")
-    list.classList.toggle("navlist-active")
-})
-let search = document.querySelector('.fa-magnifying-glass')
-let search1 = document.getElementById("search")
-variable = true;
-search.addEventListener("click", () => {
-    if (variable) {
-        search1.classList.remove("hide")
-        variable = false
-    }
-    else {
-        search1.classList.add("hide")
-        variable = true
-    }
-})
 
 
 
- window.addEventListener("DOMContentLoaded", async () =>{
+window.addEventListener("DOMContentLoaded", async () => {
     await getData()
+    const list = document.querySelector(".navlist")
+    const hamburg = document.querySelector(".fa-bars")
+    if (hamburg && list) {
+        hamburg.addEventListener("click", () => {
+            hamburg.classList.toggle("fa-x")
+            list.classList.toggle("navlist-active")
+        })
+    }
+    let search = document.querySelector('.fa-magnifying-glass')
+    let search1 = document.getElementById("search")
+    variable = true;
+    if (search && search1) {
+    search.addEventListener("click", () => {
+        if (variable) {
+            search1.classList.remove("hide")
+            variable = false
+        } else {
+            search1.classList.add("hide")
+            variable = true
+        }
+    })
+}
 
     newproductsdata.forEach(e => {
         createcard(".new", e.state, e.image, e.name, e.brand, e.price)
     });
     bestsaledata.forEach(e => {
-        createcard(".bestsale",e.state, e.image, e.name, e.brand, e.price)
+        createcard(".bestsale", e.state, e.image, e.name, e.brand, e.price)
     });
     offers("truck", "Free Shipping", "Free Shipping On Order Over $50")
     offers("money-bill-1", "Cash On Deliver", "The Internet Trend to repeat")

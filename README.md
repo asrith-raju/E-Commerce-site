@@ -60,4 +60,4 @@ It dynamically loads products from JSON files and allows users to view products 
 
 ## 👨‍💻 Developer
 
-- Developed by **Asrith Raju**  
+- Developed by ***Asrith Raju***  

@@ -34,7 +34,7 @@ It dynamically loads products from JSON files and allows users to view products 
 - Product categories for Men, Women, Kids, and Accessories.
 - Dynamic product rendering using JSON (`best-sale.json` and `new-products.json`).
 - Shopping cart functionality (`cart.js`).
-- Incrementing the items and corresponding price in the cart itself
+- Incrementing the items and corresponding price in the cart itself(`cart.js`).
 - Responsive design with custom CSS (`style.css`, `product.css`, `cart.css`).
 
 ---
